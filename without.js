@@ -8,25 +8,25 @@ const eqArrays = function(array1, array2) {
     }
   }
   return true;
-}
+};
 
 const assertArraysEqual = function(array1, array2) {
   if (eqArrays(array1, array2) === true) {
-    console.log(`✅✅✅ Assertion Passed`)
+    console.log(`✅✅✅ Assertion Passed`);
   } else {
-    console.log(`❌❌❌ Assertion Failed`)
-  };
+    console.log(`❌❌❌ Assertion Failed`);
+  }
 };
 
 const without = function(array, removeElem) {
   let output = [];
   for (let i = 0; i < array.length; i++) {
     if (array[i] !== removeElem) {
-    output.push(array[i]);
-    } 
+      output.push(array[i]);
+    }
   }
   return output;
-}
+};
 
 
 const words = ["hello", "world", "lighthouse"];
@@ -34,5 +34,5 @@ without(words, ["lighthouse"]); // no need to capture return value for this test
 // Make sure the original array was not altered by the without function
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);
 
-console.log(without([1, 2, 3], [1])) // => [2, 3]
+console.log(without([1, 2, 3], [1])); // => [2, 3]
 console.log(without(["1", "2", "3"], "3")); // => ["1", "2"]
