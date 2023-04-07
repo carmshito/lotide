@@ -1,9 +1,9 @@
 const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
+  if (actual !== expected) {
     console.log(`❌❌❌ Assertion Failed: ${actual} !== ${expected}`);
+    return;
   }
+  console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
 };
 
 // Implement a function eqArrays which takes in two arrays and returns true or false, based on a perfect match.
