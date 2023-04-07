@@ -23,14 +23,17 @@ const eqObjects = function(object1, object2) {
   let array2 = Object.keys(object2); //  array of keys
   if (array1.length !== array2.length) {
     return false;
-  } for (let key of array1) {
+  } 
+  for (let key of array1) {
     if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
-      return (eqArrays(object1[key], object2[key]));
-    } else if (object1[key] === object2[key]) {
-      return true;
+      if (!eqArrays(object1[key], object2[key])) {
+        return false;
+      }
+    } else if (object1[key] !== object2[key]) {
+      return false;
     }
-    return false;
   }
+  return true;
 };
 
 //TEST CODE
