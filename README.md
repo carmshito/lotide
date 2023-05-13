@@ -42,5 +42,6 @@ The following functions are currently implemented:
 * `letterPositions`: function that returns all the indices in the strings where each character is found
 * `without`: removes elements from an array
 * `takeUntil`: returns a slice of the array from the original array until the callback provide returns a truthy value
+* `flatten`: function that takes an array containing elements including nested arrays of elements and returns a flattened version of the array
 
 
