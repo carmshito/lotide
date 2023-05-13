@@ -4,13 +4,13 @@ const assert = require("chai").assert;
 describe("#findKeyByValue", () => {
   
   const bestTVShowsByGenre = {
-    sci_fi: "The Expanse",
+    sciFi: "The Expanse",
     comedy: "Brooklyn Nine-Nine",
     drama:  "The Wire"
   };
 
-  it("returns sci_fi for 'The Expanse'", () => {
-    assert.strictEqual(findKeyByValue(bestTVShowsByGenre, "The Expanse"), "sci_fi");
+  it("returns sciFi for 'The Expanse'", () => {
+    assert.strictEqual(findKeyByValue(bestTVShowsByGenre, "The Expanse"), "sciFi");
   });
 
   it("returns undefined for 'The Last of Us'", () => {
